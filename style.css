@@ -16,7 +16,9 @@ Class/Section : CSCI2720
 Date : 29/9/2023 */
 
 header {
-  background-color: crimson;
+  /*background-color: crimson;*/
+  background-image: url("./header2.jpeg");
+  background-size: 100% 1000%;
   color: seashell;
   padding: 1.25em;
   text-align: center;
