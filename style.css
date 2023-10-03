@@ -66,6 +66,12 @@ section {
   margin-bottom: 20px;
 }
 
+.responsive {
+  width: 100%;
+  max-width: 14em;
+  height: auto;
+}
+
 #title {
   color: SeaShell;
   background-color: Crimson;
