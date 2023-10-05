@@ -30,10 +30,20 @@ Date : 29/9/2023 */
 .header-text {
   color: seashell;
   text-align: center;
-  font-size: 1.75em;
+  font-size: 1.75rem;
   font-family: 'Rubik', sans-serif;
   font-weight: 500;
   padding: 1.25em;
+}
+
+@media (max-width: 768px) {
+  .header {
+    height: 200px;
+  }
+
+  .header-text {
+    font-size: 1rem;
+  }
 }
 
 body {
