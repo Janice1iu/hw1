@@ -38,7 +38,7 @@ Date : 29/9/2023 */
 
 @media (max-width: 768px) {
   .header {
-    height: 200px;
+    height: 1.2rem;
   }
 
   .header-text {
