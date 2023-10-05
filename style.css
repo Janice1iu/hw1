@@ -15,17 +15,25 @@ Student ID : 1155159567
 Class/Section : CSCI2720
 Date : 29/9/2023 */
 
-header {
-  /*background-color: crimson;*/
-  background-image: url("./header2.jpeg");
-  background-size: 100% 1000%;
+.header {
+  /*background-image: url('./header-r.jpeg');*/
+  background-image: url('https://images.unsplash.com/photo-1518893063132-36e46dbe2428?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2835&q=80');
+  background-color: crimson;
+  background-size: cover;
+  background-position: center;
+  height: 10em; /* Set an appropriate height for your header */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-text {
   color: seashell;
-  padding: 1.25em;
   text-align: center;
-  margin-bottom: 0;
   font-size: 1.75em;
   font-family: 'Rubik', sans-serif;
   font-weight: 500;
+  padding: 1.25em;
 }
 
 body {
@@ -58,6 +66,10 @@ nav ul li a {
   font-family: 'Poppins', sans-serif;
   font-weight: 500;
 }*/
+
+nav {
+  margin-bottom: 1.25em;
+}
 
 section {
   max-width: 50em;
