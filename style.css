@@ -21,7 +21,7 @@ Date : 29/9/2023 */
   background-color: crimson;
   background-size: cover;
   background-position: center;
-  height: 10em; /* Set an appropriate height for your header */
+  height: 10rem; /* Set an appropriate height for your header */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -36,13 +36,13 @@ Date : 29/9/2023 */
   padding: 1.25em;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1080px) {
   .header {
-    height: 1.2rem;
+    height: 5rem;
   }
 
   .header-text {
-    font-size: 1rem;
+    font-size: 1.5rem;
   }
 }
 
