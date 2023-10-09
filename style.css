@@ -54,6 +54,10 @@ body {
   background-color: seashell;
 }
 
+#sec-navbar {
+  display: none; /*set to hide sec-navbar at first*/
+}
+
 /*nav ul {
   margin-top: 0.75em;
   background-color: #E73C37;
@@ -77,10 +81,15 @@ nav ul li a {
   font-weight: 500;
 }*/
 
-nav {
+/* 
+#navbar-main {
   margin-bottom: 1.25em;
-}
+} 
+*/
 
+main {
+  margin: 1em;
+}
 section {
   max-width: 50em;
   margin: 0 auto;
@@ -102,6 +111,16 @@ aside {
 
 aside > p {
   margin: 0.4rem;
+}
+
+.left-container {
+  display: flex; /* flex container */
+  flex-direction: column; /* direction of main axis */
+  justify-content: center; /* align item along the main axis */
+}
+
+.right-container{
+  padding-top: 1em;
 }
 
 h2 {

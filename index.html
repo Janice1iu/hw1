@@ -47,7 +47,8 @@ Date : 29/9/2023 -->
       </div>
     </header>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <!--The main navar-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" id="main-navbar">
       <div class="container-fluid">
         
         <a class="navbar-brand" href="#">Chihara Jr.</a>
@@ -82,6 +83,9 @@ Date : 29/9/2023 -->
             <li class="nav-item">
               <a class="nav-link" href="#links">Links</a>
             </li>
+            <li class="nav-item" id="showHide-nav-item">
+              <a class="nav-link" id="showHide-link" href="#">Show</a>
+            </li>
           </ul>
           <form class="d-flex">
             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
@@ -91,6 +95,21 @@ Date : 29/9/2023 -->
       </div>
     </nav>
 
+    <!--The second navar containing buttons-->
+    <nav class="navbar navbar-light bg-light" id="sec-navbar">
+      <form class="container-fluid justify-content-start">
+        <button class="btn btn-primary me-2" id="task3-1-button" type="button">Task 1</button>
+        <button class="btn btn-secondary me-2" id="task3-2-button" type="button">Task 2</button>
+        <button class="btn btn-success me-2" id="task3-3-button" type="button">Task 3</button>
+      </form>
+    </nav>
+
+    <!--Task3-1: column of text to be aligned-->
+    <div class="col-sm-12 bg-primary text-start p-3 border task3-1-column" id="task3-1-column-1">
+      <div class="text-white">Task 1: Align</div>
+    </div>
+   
+
     <main>
       <!--main content of the site-->
 
@@ -99,10 +118,11 @@ Date : 29/9/2023 -->
         <!--bootstrap column with 2 columns, one size 4 showing img, one size 8 showing paragraph-->
         <div class="container">
           <div class="row">
-            <div class="col-md-4">
-              <img src="https://asianwiki.com/images/9/90/Koji_Chihara.jpg" alt="Image of Jr." class="responsive img-thumbnail rounded float-left">
+            <div class="col-md-4 left-container">
+              <img src="https://asianwiki.com/images/9/90/Koji_Chihara.jpg" alt="Image of Jr." class="responsive rounded float-left">
             </div>
-            <div class="col-md-8">
+            <!--Task3-1: column of text to be aligned-->
+            <div class="text-start col-md-8 right-container task3-1-column" id="task-3-1-column-2">
               <p class="lead"><strong>Chihara Junior (千原ジュニア)</strong> is a Japanese comedian, MC and actor.
                 He is the brain of the comedy duo Chihara Brothers.</p>
               <aside>
