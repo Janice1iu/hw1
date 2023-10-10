@@ -98,7 +98,7 @@ Date : 29/9/2023 -->
     <!--The second navar containing buttons-->
     <nav class="navbar navbar-light bg-light" id="sec-navbar">
       <form class="container-fluid justify-content-start">
-        <button class="btn btn-primary me-2" id="task3-1-button" type="button">Task 1</button>
+        <button class="btn btn-primary me-2" id="task3-1-button" type="button">Task 1: Align</button>
         <button class="btn btn-secondary me-2" id="task3-2-button" type="button">Task 2</button>
         <button class="btn btn-success me-2" id="task3-3-button" type="button">Task 3</button>
       </form>
@@ -359,6 +359,15 @@ Date : 29/9/2023 -->
       //-->
       </section>
 
+      <section id="spotlight">
+        <h2><i class="bi bi-chevron-double-right"></i>Spotlight</h2>
+        <div class="container">
+          <div class="row" id="spotlightRow">
+            <!-- Task3.2: Columns to be added here -->
+          </div>
+        </div>
+      </section>
+
       <section id="work">
         <h2><i class="bi bi-chevron-double-right"></i>Work</h2>
 
@@ -366,10 +375,12 @@ Date : 29/9/2023 -->
 
       <section id="links">
         <h2><i class="bi bi-chevron-double-right"></i>External Links</h2>
-        <p><a>Please find below links for more information.</a></p>
-        <p><a href="https://profile.yoshimoto.co.jp/talent/detail?id=19" target="_blank">Chihara Brothers Official Site</a></p>
-        <p><a href="https://www.instagram.com/chihara_jr/" target="_blank">Chihara Junior Instagram</a></p>
-        <p><a href="https://www.youtube.com/channel/UCzpMoI_9uAqcIxpq3Ydf2Lg" target="_blank">Chihara Junior YouTube</a></p>
+        <!--p>Visit these sites for more information.</p-->
+        <ul class="list-inline text-center">
+          <li class="list-inline-item"><a href="https://profile.yoshimoto.co.jp/talent/detail?id=19" target="_blank">Official Site</a></li> |
+          <li class="list-inline-item"><a href="https://www.instagram.com/chihara_jr/" target="_blank">Instagram</a></li> |
+          <li class="list-inline-item"><a href="https://www.youtube.com/channel/UCzpMoI_9uAqcIxpq3Ydf2Lg" target="_blank">YouTube</a></li>
+        </ul>
       </section>
       
       <!----
@@ -384,7 +395,11 @@ Date : 29/9/2023 -->
       //-->
 
     </main>
- 
+    
+    <footer>
+      <p class="text-secondary text-end font-monospace">Author: moj</p>
+      <p class="text-secondary text-end font-monospace">This site is updated on 10/10/2023</p>
+    </footer>
   
     <script  src="./script.js"></script>
   </body>

@@ -43,7 +43,7 @@ const align = () => {
   const button = document.getElementById("task3-1-button");
   const columns = document.getElementsByClassName("task3-1-column");
 
-  // Define an array of alignment classes
+  // Define an array of all 3 alignments 
   const alignClasses = ["text-start", "text-center", "text-end"];
   let alignIndex = 0; // Current alignment index
 
@@ -54,10 +54,10 @@ const align = () => {
       column.classList.add(alignClasses[alignIndex]); // Add current alignment class to the column
     }
   };
-  
+
   const handleClick = () => {
     applyAlignment();
-    // Increment the alignment index and wrap around if necessary
+    // Increment the alignment index and wrap around after 3
     alignIndex = (alignIndex + 1) % alignClasses.length;
   };
 
@@ -71,6 +71,58 @@ const align = () => {
 };
 
 align();
+/*
+// Task 3.2
+const handleSpotlight = () => {
+  const button = document.getElementById("task3-2-button");
+
+  button.addEventListener("click", () => {
+    const input = prompt("Enter a spotlight of Chihara Junior");
+    alert(`The spotlight you input is: ${input}`);
+
+    if (input !== null && input.trim() !== "") {
+      const spotlightColumn = document.getElementById('spotlightColumn');
+      const spotlightBox = document.createElement('div');
+      spotlightBox.className = 'spotlightBox container container-gradient';
+      spotlightBox.textContent = input;
+      spotlightColumn.appendChild(spotlightBox);
+    }
+  });
+}; 
+
+handleSpotlight();*/
+
+const handleSpotlight = () => {
+  const button = document.getElementById("task3-2-button");
+
+  button.addEventListener("click", () => {
+    const input = prompt("Enter a spotlight of Chihara Junior");
+    alert(`The spotlight you input is: ${input}`);
+
+    if (input !== null && input.trim() !== "") {
+      const spotlightRow = document.getElementById('spotlightRow');
+      const spotlightColumn = document.createElement('div');
+      spotlightColumn.className = 'col spotlightColumn';
+      spotlightColumn.textContent = input;
+      spotlightRow.appendChild(spotlightColumn);
+
+      // Also add to Task3.1 class for alignment
+      spotlightColumn.classList.add('task3-1-column');
+
+       // Apply responsive class based on text length
+       if (input.length > 100) {
+        spotlightColumn.classList.add('col-12'); // Set column to full width for long text
+      } else if (input.length > 50) {
+        spotlightColumn.classList.add('col-md-6'); // Set column to half width on medium devices for medium-length text
+      } else {
+        spotlightColumn.classList.add('col-md-4'); // Set column to one-third width on medium devices for short text
+      }
+    }
+  });
+};
+
+handleSpotlight();
+
 
 
 /*
@@ -98,7 +150,7 @@ const align = () => {
 
 align();
 */
-
+/*
 // Output content in p
 //const outputElement = document.getElementById("para")
 //console.log(outputElement.innerHTML); 
@@ -143,5 +195,5 @@ myButton2.addEventListener("click", function() {
   alert("Change the color of all review boxes to blue");
   reviewBox.css("background-color", "blue");
 });
-
+*/
 

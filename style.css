@@ -189,72 +189,44 @@ h2 {
   text-align: center;
   font-weight: bold;
 }
+/*
+#spotlight {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
 
-#title {
-  color: SeaShell;
-  background-color: Crimson;
+#spotlightColumn {
+  flex: 1 1 250px;
+  padding: 10px;
+}
+
+.spotlightBox {
+  background: linear-gradient(to right, #f5a1a1, #aa0f03aa); 
+  color: white;
+  padding: 10px;
   text-align: center;
-  padding: 2em;
-  margin: 1em;
-  border: 1px solid black; 
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+} */
+
+.spotlightColumn {
+  padding: 10px;
 }
 
-#subtitle {
-  color: orangered;
-  text-align: center;
-  padding: 0.8em;
-  margin: 1em;
-  border: 1px solid orangered; 
+.spotlightColumn:nth-child(3n+1) {
+  background-color: #f8eeea; /* Set background color for every first column in a row */
 }
 
-#para {
-  color: orangered;
-  font-size: 1em;
+.spotlightColumn:nth-child(3n+2) {
+  background-color: #fcdbd0; /* Set background color for every second column in a row */
 }
 
-#textInput {
-  margin: 0.5em;
+.spotlightColumn:nth-child(3n+3) {
+  background-color: #ffcac0; /* Set background color for every third column in a row */
 }
 
-/*#submitButton {
-}*/
-
-.reviewBox {
-  float: left;
-  width: 300px;
-  height: 300px;
-  color: SeaShell;
-  display: flex; /*center align*/
-  justify-content: center; 
-  align-items: center;
-  margin: 2em;
-  padding: 2em;
-  /*border: 5px solid black;*/ 
-  background-color: crimson;
-  font-size: 0.875em;
+footer {
+  font-size: 0.75em;
 }
 
-.newReviewBox {
-  float: left;
-  width: 300px;
-  height: 300px;
-  color: crimson;
-  display: flex; /*center align*/
-  justify-content: center; 
-  align-items: center;
-  margin: 2em;
-  padding: 2em;
-  background-color: yellow;
-  font-size: 0.875em;
-}
-
-
-.after-box {
-  clear: left;
-  display: flex; /*center align*/
-  justify-content: center; 
-  align-items: center;
-  margin: 1em;
-  padding: 2em;
-  font-size: 0.875em;
-}
