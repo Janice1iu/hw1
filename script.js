@@ -44,22 +44,21 @@ const align = () => {
   const columns = document.getElementsByClassName("task3-1-column");
 
   // Define an array of alignment classes
-  const alignmentClasses = ["text-start", "text-center", "text-end"];
-  let alignmentIndex = 0; // Current alignment index
+  const alignClasses = ["text-start", "text-center", "text-end"];
+  let alignIndex = 0; // Current alignment index
 
   const applyAlignment = () => {
     for (let i = 0; i < columns.length; i++) {
       const column = columns[i];
-      column.classList.remove(...alignmentClasses); // Remove all alignment classes from the column
-      column.classList.add(alignmentClasses[alignmentIndex]); // Add current alignment class to the column
+      column.classList.remove(...alignClasses); // Remove all alignment classes from the column
+      column.classList.add(alignClasses[alignIndex]); // Add current alignment class to the column
     }
   };
-
+  
   const handleClick = () => {
     applyAlignment();
-
     // Increment the alignment index and wrap around if necessary
-    alignmentIndex = (alignmentIndex + 1) % alignmentClasses.length;
+    alignIndex = (alignIndex + 1) % alignClasses.length;
   };
 
   button.addEventListener("click", handleClick);

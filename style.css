@@ -30,7 +30,7 @@ Date : 29/9/2023 */
 .header-text {
   color: seashell;
   text-align: center;
-  font-size: 1.75rem;
+  font-size: 2.25rem;
   font-family: 'Rubik', sans-serif;
   font-weight: 500;
   padding: 1.25em;
@@ -42,7 +42,7 @@ Date : 29/9/2023 */
   }
 
   .header-text {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
 }
 
@@ -88,26 +88,58 @@ nav ul li a {
 */
 
 main {
-  margin: 1em;
+  margin-top: 1.25em;
 }
+
 section {
   max-width: 50em;
+  font-size: 1rem;
   margin: 0 auto;
   padding: 1.25em;
   background-color: white;
-  box-shadow: 0 0 0.4em rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 0.4em rgba(255, 0, 0, 0.314);
   margin-bottom: 1.25em;
 }
 
+/* Media query for smaller mobile screens */
+@media (max-width: 480px) {
+  section {
+    font-size: 0.75rem;
+    padding: 1em;
+  }
+}
+
+.lead {
+  font-size: 1.2em; /* Default font size */
+}
+
+/* Media query for smaller mobile screens */
+@media (max-width: 480px) {
+  .lead {
+    font-size: 0.85rem; /* Smaller font size for smaller screens */
+  }
+}
+
+
 aside {
+  font-size: 16px; /* Default font size */
   width: 40%;
-  padding-left: 0.5rem;
+  padding-left: 1rem;
   margin-left: 0.5rem;
   float: right;
   box-shadow: inset 5px 0 5px -5px orangered;
   font-style: italic;
   color: orangered;
 }
+
+/* Media query for smaller mobile screens */
+@media (max-width: 480px) {
+  aside {
+    font-size: 12px; /* Smaller font size for smaller screens */
+    width: 50%;
+  }
+}
+
 
 aside > p {
   margin: 0.4rem;
@@ -127,7 +159,24 @@ h2 {
   padding: 0.2em;
   background-color: white;
   color:#E73C37;
-  ;
+  
+}
+
+/* Media query for smaller mobile screens */
+@media (max-width: 480px) {
+  h2 {
+    font-size: 1.25rem;
+    padding: 0.2em;
+    background-color: white;
+    color:#E73C37;
+  }
+}
+
+/* Media query for smaller mobile screens */
+@media (max-width: 480px) {
+  h4 {
+    font-size: 1rem;
+  }
 }
 
 .responsive {
