@@ -58,6 +58,14 @@ body {
   display: none; /*set to hide sec-navbar at first*/
 }
 
+.progress {
+  width: 100%; /* Set the desired width for the progress bar container */
+}
+
+.progress-bar {
+  width: 50%; /* Set the desired width for the progress bar */
+}
+
 /*nav ul {
   margin-top: 0.75em;
   background-color: #E73C37;
@@ -127,9 +135,9 @@ aside {
   padding-left: 1rem;
   margin-left: 0.5rem;
   float: right;
-  box-shadow: inset 5px 0 5px -5px orangered;
+  box-shadow: inset 5px 0 5px -5px crimson;
   font-style: italic;
-  color: orangered;
+  color: crimson;
 }
 
 /* Media query for smaller mobile screens */
@@ -166,9 +174,20 @@ h2 {
 @media (max-width: 480px) {
   h2 {
     font-size: 1.25rem;
-    padding: 0.2em;
-    background-color: white;
-    color:#E73C37;
+  }
+}
+
+/* Media query for smaller mobile screens */
+@media (max-width: 480px) {
+  h5 {
+    font-size: 0.8rem;
+  }
+}
+
+/* Media query for smaller mobile screens */
+@media (max-width: 480px) {
+  h6 {
+    font-size: 0.75rem;
   }
 }
 
@@ -228,5 +247,23 @@ h2 {
 
 footer {
   font-size: 0.75em;
+}
+
+.comment-button {
+  margin-top: 1em;
+}
+
+.is-invalid {
+  border: 1px solid red;
+}
+
+.error-message {
+  color: red;
+}
+
+.color-error-message {
+  color: red; 
+  font-size: 12px; 
+  margin-top: 5px; 
 }
 

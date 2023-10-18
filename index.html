@@ -26,11 +26,12 @@ Date : 29/9/2023 -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" 
   rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" 
   crossorigin="anonymous">
+  <!-- Include Bootstrap JS-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
   <!-- Bootstrap Font Icon CSS -->
   <link rel="stylesheet" href=
   "https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
-  <!-- jsDeliver JavaScript Bundle with Popper -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-kQtW33rZJAHjgefvhyyzcGF3C5TFyBQBA13V1RKPf4uH+bwyzQxZ6CmMZHmNBEfJ" crossorigin="anonymous"></script>
+  
   <link rel="stylesheet" href="./style.css">
   <!--link rel="stylesheet" href="https://fonts.google.com/specimen/Bebas+Neue"-->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -64,7 +65,7 @@ Date : 29/9/2023 -->
               <a class="nav-link" href="#profile">Profile</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#biography">Biography</a>
+              <a class="nav-link" href="#works">Works</a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#appearances" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -78,7 +79,7 @@ Date : 29/9/2023 -->
               </ul>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#work">Work</a>
+              <a class="nav-link" href="#comments">Comments</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#links">Links</a>
@@ -87,10 +88,6 @@ Date : 29/9/2023 -->
               <a class="nav-link" id="showHide-link" href="#">Show</a>
             </li>
           </ul>
-          <form class="d-flex">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
-          </form>
         </div>
       </div>
     </nav>
@@ -98,17 +95,19 @@ Date : 29/9/2023 -->
     <!--The second navar containing buttons-->
     <nav class="navbar navbar-light bg-light" id="sec-navbar">
       <form class="container-fluid justify-content-start">
-        <button class="btn btn-primary me-2" id="task3-1-button" type="button">Task 1: Align</button>
-        <button class="btn btn-secondary me-2" id="task3-2-button" type="button">Task 2</button>
-        <button class="btn btn-success me-2" id="task3-3-button" type="button">Task 3</button>
+        <div class="d-grid gap-2 d-md-block">
+          <button class="btn btn-primary me-2" id="task3-1-button" type="button">Task 1: Align</button>
+          <button class="btn btn-secondary me-2" id="task3-2-button" type="button">Task 2: Spotlight</button>
+          <button class="btn btn-success me-2" id="task3-3-button" type="button">Task 3: Scroll</button>
+        </div>
       </form>
     </nav>
 
-    <!--Task3-1: column of text to be aligned-->
-    <div class="col-sm-12 bg-primary text-start p-3 border task3-1-column" id="task3-1-column-1">
-      <div class="text-white">Task 1: Align</div>
+
+    <!--Task3-3: Striped progress bar-->
+    <div class="progress">
+      <div id="task3-3-progress-bar" class="progress-bar bg-danger progress-bar-striped progress-bar-animated" role="progressbar" aria-label="Default striped example" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
     </div>
-   
 
     <main>
       <!--main content of the site-->
@@ -133,26 +132,12 @@ Date : 29/9/2023 -->
             </div>
           </div>
         </div>
-        <!--div class="container">
-          <div class="row">
-            <div class="col-md-4">
-              <img src="https://asianwiki.com/images/9/90/Koji_Chihara.jpg" alt="Image of Jr." class="img-fluid rounded float-md-start" style="max-width: 200px; height: auto;">
-            </div>
-            <div class="col-md-8">
-              <p class="lead" style="font-size: 14px;"><strong>Chihara Junior (千原ジュニア)</strong> is a Japanese comedian, MC, and actor. He is the brain of the comedy duo Chihara Brothers.</p>
-              <aside>
-                <p style="font-size: 12px;">Chihara Junior is famous for his one-man talk show and surrealistic stage comedy.</p>
-              </aside>
-              <p class="lead" style="font-size: 14px;">Born in Fukuchiyama, Kyoto, on 30 March 1974, Junior moved to Osaka and joined Yoshimoto Kogyo in 1989. He has been active on TV and stage for over 30 years. He also wrote and published several novels, comics, and haiku collections.</p>
-            </div>
-          </div>
-        </div-->
       </section>
 
       <section id="profile">
         <h2><i class="bi bi-chevron-double-right"></i>Profile</i></h2>
         <!--bootstrap table showing basic info-->
-        <div class="table-responsive">
+        <div class="table-responsive task3-1-column">
           <table class="table table-hover" id="table-info">
             <thead>
               <tr>
@@ -243,32 +228,36 @@ Date : 29/9/2023 -->
           </table>
         </div>
         
-
       </section>
 
-      <section id="biography">
-        <h2><i class="bi bi-chevron-double-right"></i>Biography</h2>
-        <p>Chihara Junior is a Japanese comedian and actor. 
-          He is the member of the comedy duo Chihara Brothers.</p>
-        <div class="container bg-warning">
-          <div class="row">
-              <!--row has 12 columns default-->
-              <!--Add a row with size 4,3,2,1-->
-              <div class="col-sm-1 col-xl-4 bg-primary">A</div>
-              <div class="col-sm-2 col-xl-3 bg-secondary">For</div>
-              <div class="col-sm-3 col-xl-2 bg-danger">Apple</div>
-              <div class="col-sm-4 col-xl-1 bg-info">OK</div>
-          </div>
-        </div>
-
-        <div class="container-sm">Container with small breakpoint<br><br>
-            <p><a href="https://cuhk.edu.hk" target="_blank">CUHK homepage</a></p>
-        </div>
+      <section id="works">
+        <h2><i class="bi bi-chevron-double-right"></i>Works</h2>
+        <p>Starting from the late 90s, Junior has been active on stage. His stage performances are
+          well recorded and sometimes called the dark wave of Japanese comedies.</p> 
+        </p>
+          <h4 class="task3-1-column" id="head4-variety">Stage performance</h4> 
+          <dl>
+            <dt>Duo</dt>
+          </dl>
+          <ul>
+            <li>Chihara Jari no Baka Video (1997)</li>
+            <li>Chihara Brothers Hajime TOUR '97 - The voices of the lost children (1997)</li>
+            <li>PINK (1998)</li>
+            <li>I stopped the propeller, to hear my voice. (2004)</li>
+            <li>Below 15 (2007)</li>
+            <li>Chihara Brothers Contrave 'Love' (2009)</li>
+            <li>Chihara Talk (2008- )</li>
+          </ul>
+          <dt>Single</dt>
+          <ul>
+            <li>Six TV directors and Chihara Junior (2017)</li>
+            <li>1P (2018)</li>
+          </ul>
       </section>
 
       <section id="appearances">
         <h2><i class="bi bi-chevron-double-right"></i>Appearances</h2>
-        <h4 id="head4-variety">TV Variety Show</h4> 
+        <h4 class="task3-1-column" id="head4-variety">TV Variety Show</h4> 
         <dl>
           <dt>Now</dt>
         </dl>
@@ -323,53 +312,78 @@ Date : 29/9/2023 -->
           <li>Trace (2019, Fuji TV)</li>
           <li>Don't Say Mystery (7 Feb 2022 - 28 Mar 2022, Fuji TV)</li>
         </ul>
-        
-
-    
-        <!----
-        <ul class="list-group">
-          <li class="list-group-item">
-            <strong>TV Variety Shows</strong>
-            <ul class="list-group">
-              <li class="list-group-item">Past Shows:</li>
-              <li class="list-group-item">Current Shows:</li>
-            </ul>
-          </li>
-          <li class="list-group-item">
-            <strong>Net Shows</strong>
-            <ul class="list-group">
-              <li class="list-group-item">Past Shows:</li>
-              <li class="list-group-item">Current Shows:</li>
-            </ul>
-          </li>
-          <li class="list-group-item">
-            <strong>Radio</strong>
-            <ul class="list-group">
-              <li class="list-group-item">Past Shows:</li>
-              <li class="list-group-item">Current Shows:</li>
-            </ul>
-          </li>
-          <li class="list-group-item">
-            <strong>TV Drama</strong>
-          </li>
-          <li class="list-group-item">
-            <strong>Film</strong>
-          </li>
-        </ul>
-      //-->
       </section>
 
       <section id="spotlight">
         <h2><i class="bi bi-chevron-double-right"></i>Spotlight</h2>
         <div class="container">
           <div class="row" id="spotlightRow">
+            <p>You may add spotlight here! Click the spotlight button on top.</p>
+          </div>
+          <div class="row" id="spotlightRow">
             <!-- Task3.2: Columns to be added here -->
           </div>
         </div>
       </section>
 
-      <section id="work">
-        <h2><i class="bi bi-chevron-double-right"></i>Work</h2>
+      <section id="comments">
+        <h2><i class="bi bi-chevron-double-right"></i>Comments</h2>
+        <div class="container p-2 m-1 flex-wrap">
+          <!--Comments are shown here--> 
+          <div id="comment"> 
+            <div id="c1001" class="d-flex"> <!-- flex layout -->
+              <div class="flex-shrink-0 circle-show"> <!-- disallow div to shrink when page gets smaller -->
+                <svg height="80" width="80">
+                  <circle cx="35" cy="35" r="30" fill="pink">
+                </svg>
+              </div>
+              <div class="flex-grow-1 email-show"> <!-- allow div to grow and take up all space -->
+                <h5>moji@gmail.com</h5>
+                <p>This is great!</p>
+              </div>
+            </div>
+          </div>
+          <hr>
+          <h6>Add your comment:</h6>
+          <form>
+          <div class="mb-3">
+            <label for="new-email" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="new-email" placeholder="name@example.com" required>
+            <span class="error-message"></span>
+          </div>
+          <div class="mb-3">
+            <label for="new-comment" class="form-label">Comment</label>
+            <textarea class="form-control" id="new-comment" rows="3" required></textarea>
+            <span class="error-message"></span>
+          </div>
+          <div class="form-check">
+              <input class="form-check-input" type="radio" name="new-color" id="new-color-red" value="red">
+              <label class="form-check-label" for="new-color-red">Red</label>
+              <span class="color-error-message"></span>
+          </div>
+          <div class="form-check">
+              <input class="form-check-input" type="radio" name="new-color" id="new-color-blue" value="blue">
+              <label class="form-check-label" for="new-color-blue">Blue</label>
+              <span class="color-error-message"></span>
+          </div>
+          <div class="form-check">
+              <input class="form-check-input" type="radio" name="new-color" id="new-color-yellow" value="yellow">
+              <label class="form-check-label" for="new-color-yellow">Yellow</label>
+              <span class="color-error-message"></span>
+          </div>
+          <div class="form-check">
+              <input class="form-check-input" type="radio" name="new-color" id="new-color-pink" value="pink">
+              <label class="form-check-label" for="new-color-pink">Pink</label>
+              <span class="color-error-message"></span>
+          </div>
+            <!-- TODO: Add more choices here with div/input/label -->
+          <div class="d-grid gap-2 d-md-block comment-button">
+            <button type="button" class="btn me-2 btn-primary" onclick="processForm()">Add comment</button>
+            <!--button type="button" class="btn me-2 btn-success" onclick="loadfile()">Load File</button-->
+            <!--button type="button" class="btn me-2 btn-success" onclick="savefile()">Save File</button-->
+          </div>
+          </form>
+        </div>
 
       </section>
 
@@ -382,23 +396,12 @@ Date : 29/9/2023 -->
           <li class="list-inline-item"><a href="https://www.youtube.com/channel/UCzpMoI_9uAqcIxpq3Ydf2Lg" target="_blank">YouTube</a></li>
         </ul>
       </section>
-      
-      <!----
-      <aside>
-        <h2>Trivia</h2>
-        <ul>
-          <li><a href="#">Link 1</a></li>
-          <li><a href="#">Link 2</a></li>
-          <li><a href="#">Link 3</a></li>
-        </ul>
-      </aside>
-      //-->
 
     </main>
     
     <footer>
-      <p class="text-secondary text-end font-monospace">Author: moj</p>
-      <p class="text-secondary text-end font-monospace">This site is updated on 10/10/2023</p>
+      <p class="text-secondary text-end font-monospace">Author: Janice Liu</p>
+      <p class="text-secondary text-end font-monospace">This site is updated on 17/10/2023</p>
     </footer>
   
     <script  src="./script.js"></script>
